@@ -1,4 +1,4 @@
-- hosts: localhost
+- name: "Install Desktop Applications"
   vars:
     jetbrains_toolbox_version: 1.16
   roles:

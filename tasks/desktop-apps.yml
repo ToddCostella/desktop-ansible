@@ -1,5 +1,5 @@
-- name: "Install Desktop Applications"
-  vars:
+- name: "Install Packages"
+  include_vars:
     jetbrains_toolbox_version: 1.16
   roles:
     - jaredhocutt.jetbrains_toolbox

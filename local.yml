@@ -7,4 +7,4 @@
 
   tasks:
     - include: tasks/packages.yml
-    - include: tasks/desktop.yml
+    - include: tasks/desktop-apps.yml

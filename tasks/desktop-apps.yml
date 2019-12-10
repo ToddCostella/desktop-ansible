@@ -1,5 +1,7 @@
 - name: "Install Packages"
   include_vars:
-    jetbrains_toolbox_version: 1.16
+    toolbox_version: "1.18"
+    toolbox_install_dir: "/opt"
   roles:
-    - jaredhocutt.jetbrains_toolbox
+    - { role: webarchitect609.jet_brains_toolbox }
+

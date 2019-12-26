@@ -24,3 +24,11 @@ Public and private key to get at github
  
 
 https://opensource.com/article/18/3/manage-workstation-ansible
+
+
+```
+$ sudo apt update
+$ sudo apt install software-properties-common
+$ sudo apt-add-repository --yes --update ppa:ansible/ansible
+$ sudo apt install ansible
+```

@@ -111,9 +111,16 @@ function d.p {
     docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Mounts}}\t {{.Ports}}"| sed 's/0.0.0.0://g'|sed 's/\/tcp/ /g'
 }
 
+function d.i {
+    docker inspect $(docker ps|grep $1|awk '{print $1}')
+}
+
 
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/todd/.sdkman"
 [[ -s "/home/todd/.sdkman/bin/sdkman-init.sh" ]] && source "/home/todd/.sdkman/bin/sdkman-init.sh"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

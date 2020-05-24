@@ -8,4 +8,5 @@
     - vars/desktop-apps.yml
   tasks:
     - include: tasks/packages.yml
-  
+    - include: tasks/zsh.yml
+

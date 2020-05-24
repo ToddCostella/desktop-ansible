@@ -5,5 +5,4 @@
       - mc
       - curl
       - xclip
-      - zsh
     state: present

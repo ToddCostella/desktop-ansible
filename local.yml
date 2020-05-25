@@ -9,4 +9,5 @@
   tasks:
     - include: tasks/packages.yml
     - include: tasks/zsh.yml
+    - include: tasks/create-todd.yml
 

@@ -1,0 +1,6 @@
+- name: Add the user 'todd' with a zsh
+  user:
+    name: todd
+    shell: /bin/zsh
+    groups: sudo
+    append: yes

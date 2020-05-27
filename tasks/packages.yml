@@ -5,4 +5,7 @@
       - mc
       - curl
       - xclip
+      - firewalld
     state: present
+
+

@@ -67,14 +67,13 @@ Other useful bits
 ansible -m ping all
 ```
 
-
+Upgrade erlang before running. 
+https://computingforgeeks.com/how-to-install-latest-erlang-on-ubuntu-linux/
+Look into a specific erlang ansible role instead of having the rabbit one attempt to resolve it
 
 ```
- neo4j /etc/neo4j
-
- neo4j sudo nano neo4j.conf 
- neo4j sudo systemctl restart neo4j 
-
+  neo4j-admin memrec  
+  sudo nano /etc/neo4j/neo4j.conf 
 
 # With default configuration Neo4j only accepts local connections.
 # To accept non-local connections, uncomment this line:
@@ -88,13 +87,14 @@ dbms.default_listen_address=0.0.0.0
 # individual connectors below.
 dbms.default_advertised_address=167.99.176.53
 ```
+```  sudo systemctl restart neo4j ```
 
 ```
 rabbitmq-plugins enable rabbitmq_management
-rabbitmqctl add_user "todd" "password"
-rabbitmqctl set_user_tags test administrator
-rabbitmqctl set_user_tags todd administrator
-rabbitmqctl set_permissions -p / todd ".*" ".*" ".*"
+rabbitmqctl add_user "menome" "menome"
+rabbitmqctl set_user_tags menome administrator
+rabbitmqctl set_user_tags menome administrator
+rabbitmqctl set_permissions -p / menome ".*" ".*" ".*"
 
 
 ````

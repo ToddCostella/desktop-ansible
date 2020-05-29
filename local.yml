@@ -6,12 +6,12 @@
       apt: update_cache=yes
       changed_when: False
   roles:
-#    - geerlingguy.rabbitmq
+    - geerlingguy.rabbitmq
     - kevincoakley.neo4j
   vars_files:
     - vars/desktop-apps.yml
   tasks:
     - include: tasks/packages.yml
     - include: tasks/zsh.yml
-    - include: tasks/firewalld.yml
+
 

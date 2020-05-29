@@ -2,5 +2,5 @@ toolbox_version: "1.15.5796"
 toolbox_install_dir: "/opt"
 rabbitmq_version: "3.7.8"
 rabbitmq_deb: "rabbitmq-server_{{ rabbitmq_version }}-1_all.deb"
-rabbitmq_deb_url: "https://github.com/rabbitmq/rabbitmq-server/releases/download/v{{ rabbitmq_version }}/{{ rabbitmq_deb }}"
+rabbitmq_deb_url: "https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.8.4/rabbitmq-server_3.8.4-1_all.deb"
 

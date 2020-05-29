@@ -5,7 +5,8 @@
       - mc
       - curl
       - xclip
-      - firewalld
+      - zip
+      - unzip
     state: present
 
 

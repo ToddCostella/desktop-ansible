@@ -1,0 +1,16 @@
+- name: Copy public key
+  copy:
+    src: /home/todd/.ssh/id_rsa.pub
+    dest: /root/.ssh
+    owner: root
+    group: root
+    mode: u+rw,g+r,o+r
+
+
+- name: Copy private key
+  copy:
+    src: /home/todd/.ssh/id_rsa
+    dest: /root/.ssh
+    owner: root
+    group: root
+    mode: u+rw,g-r,o-r

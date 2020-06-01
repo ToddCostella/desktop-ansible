@@ -13,5 +13,9 @@
   tasks:
     - include: tasks/packages.yml
     - include: tasks/zsh.yml
+    - include: tasks/create_rabbit_user.yml
+    - include: tasks/chsh_zsh.yml
+    - include: tasks/copy_ssh_keys.yml
+    - include: tasks/copy_neo4j_apoc_plugin.yml
 
 

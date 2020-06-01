@@ -1,0 +1,7 @@
+- name: Copy neo4j apoc extensions
+  copy:
+    src: apoc-4.0.0.12-all.jar
+    dest: /var/lib/neo4j/plugins
+    owner: root
+    group: root
+    mode: u+r,g+r,o+r

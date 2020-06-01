@@ -1,0 +1,3 @@
+- name: Change the shell for root to zsh
+  shell:
+    cmd: chsh -s /bin/zsh

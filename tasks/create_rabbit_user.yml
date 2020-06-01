@@ -1,0 +1,9 @@
+- name: Copy rabbot_user script
+  copy:
+    src: create_rabbit_user.sh
+    dest: /tmp/create_rabbit_user.sh
+    owner: root
+    group: root
+    mode: u+rwx,g-wx,o-rwx
+- name: create menome rabbit user
+  shell: /tmp/create_rabbit_user.sh

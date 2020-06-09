@@ -1,0 +1,9 @@
+- name: wget erlang key
+  shell:
+    cmd: wget -O- https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo apt-key add -
+- name: Add the Erlang Repository
+  shell:
+    cmd: echo "deb https://packages.erlang-solutions.com/ubuntu bionic contrib" | sudo tee /etc/apt/sources.list.d/rabbitmq.list
+- name: Install Erlang
+  shell:
+    cmd: sudo apt update;sudo apt install -y erlang

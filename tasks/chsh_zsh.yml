@@ -1,3 +1,3 @@
-- name: Change the shell for root to zsh
+- name: Change the shell for user to zsh
   shell:
-    cmd: chsh -s /bin/zsh
+    cmd: sudo chsh -s /bin/zsh

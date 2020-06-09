@@ -22,6 +22,6 @@
 
 - name: Creating new ~/.zshrc
   copy:
-    src=~/.oh-my-zsh/templates/zshrc.zsh-template
+    src=~/.zshrc
     dest=~/.zshrc
   when: not stat_rc_result.stat.exists

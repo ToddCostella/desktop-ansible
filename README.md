@@ -51,7 +51,9 @@ and look like this:
 
 ```shell script
 ansible-galaxy install kevincoakley.neo4j
-ansible-galaxy geerlingguy.rabbitmq
+ansible-galaxy isntall geerlingguy.rabbitmq
+ansible-galaxy collection install ericsysmin.docker
+ansible-galaxy install andrewrothstein.minikube
 ```
 
 Local machine
@@ -95,6 +97,5 @@ rabbitmqctl add_user "menome" "menome"
 rabbitmqctl set_user_tags menome administrator
 rabbitmqctl set_user_tags menome administrator
 rabbitmqctl set_permissions -p / menome ".*" ".*" ".*"
-
 
 ````

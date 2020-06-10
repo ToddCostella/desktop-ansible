@@ -1,0 +1,15 @@
+- hosts: all
+  become: true
+  become_user: root
+  pre_tasks:
+    - name: update repositories
+      apt: update_cache=yes
+      changed_when: False
+  tasks:
+    - include: tasks/packages.yml
+    - include: tasks/erlang.yml
+    - include: tasks/zsh.yml
+    - include: tasks/chsh_zsh.yml
+    - include: tasks/copy_ssh_keys.yml
+
+

@@ -54,6 +54,7 @@ ansible-galaxy install kevincoakley.neo4j
 ansible-galaxy isntall geerlingguy.rabbitmq
 ansible-galaxy collection install ericsysmin.docker
 ansible-galaxy install andrewrothstein.minikube
+ansible-galaxy install comcast.sdkman
 ```
 
 Local machine

@@ -1,6 +1,5 @@
 - hosts: all
   become: true
-  become_user: root
   pre_tasks:
     - name: update repositories
       apt: update_cache=yes
@@ -15,4 +14,5 @@
   tasks:
     - include: tasks/copy_neo4j_apoc_plugin.yml
     - include: tasks/create_rabbit_user.yml
-    - include: tasks/add_user_to_libvirt_groups.yml
+    - include: tasks/add_user_to_groups.yml
+    - include: tasks/zsh.yml

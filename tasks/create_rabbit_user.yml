@@ -1,4 +1,4 @@
-- name: Copy rabbot_user script
+- name: Copy rabbit_user script
   copy:
     src: create_rabbit_user.sh
     dest: /tmp/create_rabbit_user.sh

@@ -1,15 +1,65 @@
 - hosts: all
+  vars:
+    - todd_password: '$6$w9S3t7x1kRtmG0u$6nVU9KZsC12Q8DYI4FtgKPy.e/cq/jseB/.DViTO1SpUnoCy.dxcOf8hyfitGq5V0yhgXccxzlqm2o.I3SlDJ0'
+
   become: true
-  become_user: root
   pre_tasks:
     - name: update repositories
       apt: update_cache=yes
       changed_when: False
   tasks:
+    - name: Add a new user named todd
+      user:
+        name=todd
+        password={{ todd_password }}
+        shell=/bin/zsh
+
+    - name: Add todd user to the sudoers
+      copy:
+        dest: "/etc/sudoers.d/todd"
+        content: "todd  ALL=(ALL)  NOPASSWD: ALL"
+
+    - name: Deploy SSH Key
+      authorized_key: user=todd
+        key="{{ lookup('file', '/home/todd/.ssh/id_rsa.pub') }}"
+        state=present
+
+    - name: Disable Password Authentication
+      lineinfile:
+        dest=/etc/ssh/sshd_config
+        regexp='^PasswordAuthentication'
+        line="PasswordAuthentication no"
+        state=present
+        backup=yes
+      notify:
+        - restart ssh
+
+    #   - name: Disable Root Login
+    #     lineinfile:
+    #       dest=/etc/ssh/sshd_config
+    #       regexp='^PermitRootLogin'
+    #       line="PermitRootLogin no"
+    #       state=present
+    #       backup=yes
+    #     notify:
+    #       - restart ssh
+
+    #   - name: Update shell for todd user
+    #     lineinfile:
+    #       dest=/etc/passwd
+    #       regexp='/bin/sh'
+    #       line="/bin/zsh"
+    #       state=present
+    #       backup=yes
+
     - include: tasks/packages.yml
     - include: tasks/erlang.yml
-    - include: tasks/zsh.yml
-    - include: tasks/chsh_zsh.yml
     - include: tasks/copy_ssh_keys.yml
+  handlers:
+    - name: restart ssh
+      service:
+        name=sshd
+        state=restarted
+
 
 

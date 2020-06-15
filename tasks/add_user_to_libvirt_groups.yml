@@ -1,9 +1,0 @@
-- name: Add user to libvirt
-  shell:
-    cmd: sudo adduser todd libvirt
-- name: Add user to kvm
-  shell:
-    cmd: sudo adduser todd kvm
-- name: Add user to docker
-  shell:
-    cmd: sudo usermod -aG docker todd

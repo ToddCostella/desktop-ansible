@@ -1,4 +1,3 @@
----
 - hosts: all
   vars:
     - todd_password: '$6$w9S3t7x1kRtmG0u$6nVU9KZsC12Q8DYI4FtgKPy.e/cq/jseB/.DViTO1SpUnoCy.dxcOf8hyfitGq5V0yhgXccxzlqm2o.I3SlDJ0'
@@ -6,11 +5,11 @@
   remote_user: root
 
   tasks:
-
     - name: Add a new user named todd
       user:
         name=todd
         password={{ todd_password }}
+        shell=/bin/zsh
 
     - name: Add todd user to the sudoers
       copy:
@@ -41,6 +40,14 @@
 #       backup=yes
 #     notify:
 #       - restart ssh
+
+#   - name: Update shell for todd user
+#     lineinfile:
+#       dest=/etc/passwd
+#       regexp='/bin/sh'
+#       line="/bin/zsh"
+#       state=present
+#       backup=yes
 
   handlers:
     - name: restart ssh

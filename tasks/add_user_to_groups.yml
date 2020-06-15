@@ -1,0 +1,6 @@
+- name: adding existing user todd to libvirt, kvm, docker groups
+  user:
+    name: 'todd'
+    groups: libvirt, kvm, docker
+    append: yes
+

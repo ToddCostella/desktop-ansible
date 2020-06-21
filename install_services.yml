@@ -9,6 +9,7 @@
    - geerlingguy.rabbitmq
    - kevincoakley.neo4j
    - andrewrothstein.minikube
+   - geerlingguy.redis
   vars_files:
     - vars/desktop-apps.yml
   tasks:

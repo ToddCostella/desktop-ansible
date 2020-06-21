@@ -4,3 +4,4 @@
   tasks:
     - include: tasks/zsh.yml
     - include: tasks/chsh_zsh.yml
+    - include: tasks/copy_ssh_keys.yml

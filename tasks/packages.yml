@@ -13,6 +13,7 @@
       - bridge-utils
       - git
       - zsh
+      - tmux
     state: present
 
 

@@ -55,6 +55,8 @@ ansible-galaxy isntall geerlingguy.rabbitmq
 ansible-galaxy collection install ericsysmin.docker
 ansible-galaxy install andrewrothstein.minikube
 ansible-galaxy install geerlingguy.redis
+ansible-galaxy install alban.andrieu.dropbox
+ansible-galaxy install jaredhocutt.jetbrains_toolbox
 ```
 
 Local machine

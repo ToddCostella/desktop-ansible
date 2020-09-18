@@ -10,6 +10,8 @@
    - kevincoakley.neo4j
    - andrewrothstein.minikube
    - geerlingguy.redis
+#   - alban.andrieu.dropbox
+#   - jaredhocutt.jetbrains_toolbox
   vars_files:
     - vars/desktop-apps.yml
   tasks:

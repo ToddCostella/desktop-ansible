@@ -62,6 +62,7 @@ ansible-galaxy install jaredhocutt.jetbrains_toolbox
 Local machine
 /etc/ansible/hosts
 
+ssh-copy-id -i ~/.ssh/id_rsa todd@<remote machine>
 ```
 <remote ip/digital ocean etc>
 167.99.176.53 ansible_user=root
